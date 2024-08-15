@@ -1,0 +1,7 @@
+{
+    "name": "Reserva de Salas",
+    "short_name": "Reservar salas",
+    "start_url": ".",
+    "display": "standalone",
+    "backgroud_color": "ccc"
+} 
