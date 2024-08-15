@@ -17,12 +17,12 @@
     </header>
 
     <main>
-        <div class="formulario">
+        <div class="formulario1">
             <form>
-                <h2>Reservar sala</h2>
+                <h2>Informações pessoais</h2>
 
                 <div class="input">
-                    <p><label for="name">Nome(Quem está reservando a sala):</label></p>
+                    <p><label for="name">Nome(De quem está reservando a sala):</label></p>
                     <input id="name" type="text" required placeholder="Seu nome">
                 </div>
 
@@ -36,10 +36,79 @@
                     <input id="telefone" type="tel" required placeholder="(55) 99 9999-9999">
                 </div>
 
+                <div class="input">
+                    <p><label for="endereco">Endereço:</label></p>
+                    <input id="endereco" type="text" required placeholder="Rua: x Numero: 999">
+                </div>
+
+                <div class="input">
+                    <button class="submit" id="btn-submit" type="submit" >Continuar</button>
+
+                    <script>
+                        document.getElementById("btn-submit").addEventListener("click", function(){
+                            document.querySelector(".formulario1").setAttribute("class", "submit")
+                            document.querySelector(".formulario2").setAttribute("class", "btn-submit")
+                        })
+                    </script>
+                </div>          
+
             </form>
         </div>
-    </main>
 
+        <div id="idformulario2" class="formulario2">
+            <form >
+                <h2>Reservar Sala</h2>
+
+                <div class="input">
+                    <h3>Salas:</h3>
+
+                    <label class="salas" for="sala1">Sala-1</label>
+                    <input name="salas" id="sala1" type="radio" required ><br>
+    
+                    <label class="salas" for="sala2">Sala-2</label>
+                    <input name="salas" id="sala2" type="radio" required ><br>
+
+                    <label class="salas" for="sala3">Sala-3</label>
+                    <input name="salas" id="sala3" type="radio" required ><br>
+
+                    <label class="salas" for="sala4">Sala-4</label>
+                    <input name="salas" id="sala4" type="radio" required ><br>
+
+                    <label class="salas" for="sala5">Sala-5</label>
+                    <input name="salas" id="sala5" type="radio" required ><br>
+                </div>
+
+                <div class="input">
+                    <p><label for="">Data:</label></p>
+                    <input  type="date" required placeholder="exemplo@gmail.com">
+                </div>
+
+                <div class="input">
+                    <h3>Horas Disponíveis:</h3>
+
+                    <label class="horas" for="manha">8h ás 11h</label>
+                    <input name="hora" id="manha" type="radio" required ><br>
+
+                    <label class="horas" for="tarde">14h ás 15h</label>
+                    <input name="hora" id="tarde" type="radio" required ><br>
+
+                    <label class="horas" for="noite">19h ás 21h</label>
+                    <input name="hora" id="noite" type="radio" required ><br>
+                </div>
+
+                <div class="input">
+                    <p><label for="finalidade">Finalidade(seja breve):</label></p>
+                    <input id="finalidade" type="text" required placeholder="Festa de Aniverário">
+                </div>
+
+                <div class="input">
+                    <button class="submit" id="btn-submit" type="submit">Reservar</button>
+                </div>    
+
+            </form>
+        </div>
+
+    </main>
 </body>
 
 </html>
